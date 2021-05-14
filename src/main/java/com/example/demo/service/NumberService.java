@@ -44,8 +44,8 @@ public class NumberService {
         }
 
         String result = new String(numberArray);
-        //System.out.println(Integer.parseInt(result,2));
-        return "NOT IMPLEMENTED YET";
+        int decimal = Integer.parseInt(result,2);
+        return String.valueOf(decimal);
     }
 
 

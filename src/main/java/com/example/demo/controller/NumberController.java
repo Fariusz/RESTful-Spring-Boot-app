@@ -11,23 +11,23 @@ public class NumberController {
 
     private final NumberService numberService;
 
-    @GetMapping("/tobinary/{int}")
+    @GetMapping("/toBinary/{int}")
     public String toBinary(int number){
 
         return numberService.toBinary(number);
     }
 
-    @GetMapping("/switchdigits/{int}")
+    @GetMapping("/switchDigits/{int}")
     public String switchDigits(int number){
         return numberService.switchDigits(number);
     }
 
-    @GetMapping("/reversedigits/{int}")
+    @GetMapping("/reverseDigits/{int}")
     public String reverseDigits(int number){
         return numberService.reverseDigits(number);
     }
 
-    @GetMapping("/sortdescending/{int}")
+    @GetMapping("/sortDescending/{int}")
     public String sortDescending(int number){
         return numberService.sortDescending(number);
     }
