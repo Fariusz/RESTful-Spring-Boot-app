@@ -1,5 +1,8 @@
 package com.example.demo.service;
 
+import com.example.demo.model.Task;
+import com.example.demo.repository.PostRepository;
+import com.example.demo.repository.TaskRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +13,13 @@ import static java.lang.Integer.*;
 
 @Service
 @RequiredArgsConstructor
-public class NumberService {
+public class TaskService {
+
+    private final TaskRepository taskRepository;
+
+    public List<Task> getData(){
+        return taskRepository.findAll();
+    }
 
     public String toBinary(int number){
         return toBinaryString(number);
@@ -33,20 +42,18 @@ public class NumberService {
         return toHexString(Integer.parseInt(reversedNumber, 2));
     }
 
-    public String sortDescending(int number){
+    public String sortDescending(int number) {
         byte[] numberArray = toBinaryString(number).getBytes();
         Arrays.sort(numberArray);
 
-        for (int left=0, right=numberArray.length-1; left<right; left++, right--) {
+        for (int left = 0, right = numberArray.length - 1; left < right; left++, right--) {
             byte temp = numberArray[left];
-            numberArray[left]  = numberArray[right];
+            numberArray[left] = numberArray[right];
             numberArray[right] = temp;
         }
 
         String result = new String(numberArray);
-        int decimal = Integer.parseInt(result,2);
+        int decimal = Integer.parseInt(result, 2);
         return String.valueOf(decimal);
     }
-
-
 }

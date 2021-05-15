@@ -35,3 +35,13 @@ out/
 
 ### VS Code ###
 .vscode/
+src/main/java/com/example/demo/controller/HelloController.java
+src/main/java/com/example/demo/controller/PostController.java
+src/main/java/com/example/demo/model/Comment.java
+src/main/java/com/example/demo/model/Post.java
+src/main/java/com/example/demo/repository/PostRepository.java
+src/main/java/com/example/demo/service/HelloService.java
+src/main/java/com/example/demo/service/PostService.java
+src/main/java/com/example/demo/controller/PostDto.java
+src/main/java/com/example/demo/controller/dto/PostDto.java
+src/main/java/com/example/demo/controller/PostDtoMapper.java
