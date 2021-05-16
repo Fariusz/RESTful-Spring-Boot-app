@@ -4,6 +4,7 @@ import com.example.demo.model.Method;
 import com.example.demo.model.Task;
 import com.example.demo.repository.PostRepository;
 import com.example.demo.repository.TaskRepository;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

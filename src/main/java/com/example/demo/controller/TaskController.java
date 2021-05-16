@@ -2,8 +2,11 @@ package com.example.demo.controller;
 
 import com.example.demo.model.Task;
 import com.example.demo.service.TaskService;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,35 +25,34 @@ public class TaskController {
     }
 
     @GetMapping("/toBinary/{N}")
-    public String toBinary(int N){
+    public ResponseEntity toBinary(int N){
         if(N < 0)
-            throw new IllegalArgumentException("Only non negative decimal integers!");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Non negative decimal integers only.");
         else
-            return taskService.toBinary(N);
+            return ResponseEntity.ok(taskService.toBinary(N));
     }
 
     @GetMapping("/switchDigits/{N}")
-    public String switchDigits(int N){
-
+    public ResponseEntity switchDigits(int N){
         if(N < 0)
-            throw new IllegalArgumentException("Only non negative decimal integers!");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Non negative decimal integers only.");
         else
-            return taskService.switchDigits(N);
+            return ResponseEntity.ok(taskService.switchDigits(N));
     }
 
     @GetMapping("/reverseDigits/{N}")
-    public String reverseDigits(int N){
+    public ResponseEntity reverseDigits(int N){
         if(N < 0)
-            throw new IllegalArgumentException("Only non negative decimal integers!");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Non negative decimal integers only.");
         else
-            return taskService.reverseDigits(N);
+            return ResponseEntity.ok(taskService.reverseDigits(N));
     }
 
     @GetMapping("/sortDescending/{N}")
-    public String sortDescending(int N){
+    public ResponseEntity sortDescending(int N){
         if(N < 0)
-            throw new IllegalArgumentException("Only non negative decimal integers!");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Non negative decimal integers only.");
         else
-            return taskService.sortDescending(N);
+            return ResponseEntity.ok(taskService.sortDescending(N));
     }
 }
