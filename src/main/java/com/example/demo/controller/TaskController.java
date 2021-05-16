@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.model.Task;
 import com.example.demo.service.TaskService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,9 +13,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TaskController {
 
+    @Autowired
     private final TaskService taskService;
 
-    @GetMapping("/data")
+    @GetMapping(value = "/data")
     public List<Task> getData(){
         return taskService.getData();
     }
