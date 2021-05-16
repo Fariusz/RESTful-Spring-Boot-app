@@ -2,7 +2,6 @@ package com.example.demo.controller;
 
 import com.example.demo.model.Task;
 import com.example.demo.service.TaskService;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,6 +17,11 @@ public class TaskController {
 
     @Autowired
     private final TaskService taskService;
+
+    @GetMapping(value = "/")
+    public String helloWorld(){
+        return taskService.helloWorld();
+    }
 
     @GetMapping(value = "/data")
     public List<Task> getData(){
