@@ -16,10 +16,6 @@ public class TaskService {
 
     private final TaskRepository taskRepository;
 
-    public String helloWorld(){
-        return "Smacznej kawusi ( ͡~ ͜ʖ ͡°)";
-    }
-
     public List<Task> getData(){
         return taskRepository.findAll();
     }
