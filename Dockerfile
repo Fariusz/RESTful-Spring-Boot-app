@@ -1,5 +1,5 @@
 FROM openjdk:12-alpine
 
-COPY build/libs/demo-*.jar /demo.jar
-
-CMD ["java" , "-jar", "/demo.jar"]
+ARG JAR_FILE=build/libs/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
