@@ -3,11 +3,9 @@ package com.example.demo.controller;
 import com.example.demo.model.StringToJson;
 import com.example.demo.model.Task;
 import com.example.demo.service.TaskService;
-import com.fasterxml.jackson.databind.util.JSONWrappedObject;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
