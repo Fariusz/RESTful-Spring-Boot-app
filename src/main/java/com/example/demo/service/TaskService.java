@@ -21,10 +21,12 @@ public class TaskService {
     }
 
     public String toBinary(int number){
-        String result = toBinaryString(number);
-        Task task = new Task(number, result, "toBinary");
-        taskRepository.save(task);
-        return result;
+        {
+            String result = toBinaryString(number);
+            Task task = new Task(number, result, "toBinary");
+            taskRepository.save(task);
+            return result;
+        }
     }
 
     public String switchDigits(int number){

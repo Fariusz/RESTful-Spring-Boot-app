@@ -34,7 +34,7 @@ public class TaskController {
     }
 
     @GetMapping("/switchDigits/{N}")
-    public ResponseEntity switchDigits(@RequestParam("N") int N){
+    public ResponseEntity switchDigits(@PathVariable("N") int N){
         if(N < 0)
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new StringToJson("Non negative decimal integers only."));
         else
