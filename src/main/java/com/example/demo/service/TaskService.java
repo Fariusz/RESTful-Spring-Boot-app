@@ -12,7 +12,7 @@ import static java.lang.Integer.*;
 
 @Service
 @RequiredArgsConstructor
-public class TaskService {
+public class TaskService implements ITaskService {
 
     private final TaskRepository taskRepository;
 
@@ -21,12 +21,10 @@ public class TaskService {
     }
 
     public String toBinary(int number){
-        {
             String result = toBinaryString(number);
             Task task = new Task(number, result, "toBinary");
             taskRepository.save(task);
             return result;
-        }
     }
 
     public String switchDigits(int number){

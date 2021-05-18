@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TaskServiceTest {
 
     @Autowired
-    private TaskService taskService;
+    private ITaskService taskService;
 
     @Test
     void toBinary_True_PositiveDecimal() {

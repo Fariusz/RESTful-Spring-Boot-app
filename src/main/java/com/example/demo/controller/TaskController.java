@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.model.StringToJson;
 import com.example.demo.model.Task;
+import com.example.demo.service.ITaskService;
 import com.example.demo.service.TaskService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ import java.util.List;
 public class TaskController {
 
     @Autowired
-    private final TaskService taskService;
+    private final ITaskService taskService;
 
     @GetMapping(value = "/data")
     public List<Task> getData(){
@@ -25,33 +26,41 @@ public class TaskController {
 
     @GetMapping("/toBinary/{N}")
     public ResponseEntity toBinary(@PathVariable("N") int N){
-        if(N < 0)
+        if(N < 0){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new StringToJson("Non negative decimal integers only."));
-        else
+        }
+        else{
             return ResponseEntity.ok(new StringToJson(taskService.toBinary(N)));
+        }
     }
 
     @GetMapping("/switchDigits/{N}")
     public ResponseEntity switchDigits(@PathVariable("N") int N){
-        if(N < 0)
+        if(N < 0){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new StringToJson("Non negative decimal integers only."));
-        else
+        }
+        else{
             return ResponseEntity.ok(new StringToJson(taskService.switchDigits(N)));
+        }
     }
 
     @GetMapping("/reverseDigits/{N}")
     public ResponseEntity reverseDigits(@PathVariable("N") int N){
-        if(N < 0)
+        if(N < 0){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new StringToJson("Non negative decimal integers only."));
-        else
+        }
+        else{
             return ResponseEntity.ok(new StringToJson(taskService.reverseDigits(N).toString()));
+        }
     }
 
     @GetMapping("/sortDescending/{N}")
     public ResponseEntity sortDescending(@PathVariable("N") int N){
-        if(N < 0)
+        if(N < 0){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new StringToJson("Non negative decimal integers only."));
-        else
+        }
+        else {
             return ResponseEntity.ok(new StringToJson(taskService.sortDescending(N)));
+        }
     }
 }
