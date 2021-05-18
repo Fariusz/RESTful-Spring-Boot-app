@@ -2,7 +2,56 @@
 ----
 Implements algorithms and return results based on given integer number.
 
-* **Available endpoints**
+
+## Quick Start with Docker
+
+1. Clone this repository
+
+   ```bash
+   git clone https://github.com/Fariusz/RESTful-Spring-Boot-app
+   ```
+
+1. Change directory
+
+   ```bash
+    cd RESTful-Spring-Boot-app
+   ```
+
+1. Compose docker
+
+   ```bash
+   docker-compose up
+   ```
+
+## Quick Start with Java
+1. Download demo_app.jar file:<br>
+
+    https://github.com/Fariusz/RESTful-Spring-Boot-app/releases/tag/1.0
+
+1. Change directory
+   
+   ```bash
+   cd /Users/*USERNAME*/Downloads
+
+   ```
+1. Run java application
+
+   ```bash
+   java -jar demo_app.jar
+   ```
+
+<br><br>
+4. Run web browser and go to:
+
+   ```bash
+   http://localhost:8080/ + endpoint 
+   example:
+   http://localhost:8080/data
+   or: 
+   http://localhost:8080/toBinary/55
+   ```
+## Available endpoints
+* **http://localhost:8080**
 
     * **/data**
       <br>List all the inputs and results from the database.
@@ -35,11 +84,4 @@ Implements algorithms and return results based on given integer number.
 
     * **Code:** 400 BAD REQUEST <br />
       **Content:** <br>`{ "response": "Non negative decimal integers only." }`
-
-* **Sample Call:**
-
-  <_Just a sample call to your endpoint in a runnable format ($.ajax call or a curl request) - this makes life easier and more predictable._>
-
-* **Notes:**
-
-  <_This is where all uncertainties, commentary, discussion etc. can go. I recommend timestamping and identifying oneself when leaving comments here._> 
+      
