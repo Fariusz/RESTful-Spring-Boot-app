@@ -1,37 +1,38 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
 
- HELP.md
- .gradle
- build/
- !gradle/wrapper/gradle-wrapper.jar
- !**/src/main/**/build/
- !**/src/test/**/build/
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
- ### STS ###
- .apt_generated
- @@ -14,17 +9,15 @@ build/
- .springBeans
- .sts4-cache
- bin/
- !**/src/main/**/bin/
- !**/src/test/**/bin/
-
-
- ### IntelliJ IDEA ###
- .idea
- *.iws
- *.iml
- *.ipr
- out/
- !**/src/main/**/out/
- !**/src/test/**/out/
-
-
- ### NetBeans ###
- /nbproject/private/
- @@ -33,15 +26,4 @@ out/
- /nbdist/
- /.nb-gradle/
-
- ### VS Code ###
- .vscode/
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+*.bin
+*.lock
+*.bin
+*.lock
