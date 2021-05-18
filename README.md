@@ -58,8 +58,6 @@ Implements algorithms and return results based on given integer number.
    java -jar demo_app.jar
    ```
 
-    **and**
-
 <br><br>
 4. Run web browser and go to:
 
