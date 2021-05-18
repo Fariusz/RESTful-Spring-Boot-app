@@ -37,6 +37,9 @@ Implements algorithms and return results based on given integer number.
    ```bash
    docker-compose up
    ```
+   
+      **or**
+
 
 ## Start with Java
 1. Download demo_app.jar file:<br>
@@ -54,6 +57,8 @@ Implements algorithms and return results based on given integer number.
    ```bash
    java -jar demo_app.jar
    ```
+
+    **and**
 
 <br><br>
 4. Run web browser and go to:
