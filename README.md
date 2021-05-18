@@ -16,9 +16,9 @@ Implements algorithms and return results based on given integer number.
     docker run -p 8080:8080 665899617/demo:radek
    ```
    
-   or
+   **or**
 
-## Quick Start with Docker-compose
+## Start with Docker-compose
 
 1. Clone this repository
 
@@ -38,7 +38,7 @@ Implements algorithms and return results based on given integer number.
    docker-compose up
    ```
 
-## Quick Start with Java
+## Start with Java
 1. Download demo_app.jar file:<br>
 
     https://github.com/Fariusz/RESTful-Spring-Boot-app/releases/tag/1.0
