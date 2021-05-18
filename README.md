@@ -59,7 +59,7 @@ Implements algorithms and return results based on given integer number.
    ```
 
 <br><br>
-4. Run web browser and go to:
+Then run web browser and go to:
 
    ```bash
    http://localhost:8080/ + endpoint 
