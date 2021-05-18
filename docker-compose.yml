@@ -1,12 +1,12 @@
 version: '3'
 
 services:
-  apptosap-container:
-    image: apptosap-docker-compose:1
+  demo-container:
+    image: demo-docker-compose:1
     build:
       context: ./
       dockerfile: Dockerfile
     volumes:
-      - /data/apptosap-container
+      - /data/demo-container
     ports:
       - "8080:8080"
