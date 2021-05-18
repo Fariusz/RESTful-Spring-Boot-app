@@ -2,8 +2,23 @@
 ----
 Implements algorithms and return results based on given integer number.
 
+## Quick Start with Dockerhub
 
-## Quick Start with Docker
+1. Pull docker repository
+
+   ```bash
+   docker pull 665899617/demo:radek
+   ```
+
+1. Run it
+
+   ```bash
+    docker run -p 8080:8080 665899617/demo:radek
+   ```
+   
+   or
+
+## Quick Start with Docker-compose
 
 1. Clone this repository
 
