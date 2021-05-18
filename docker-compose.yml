@@ -1,12 +1,12 @@
 version: '3'
 
 services:
-  radek-app-container:
-    image: radek-app-docker-compose:1
+  apptosap-container:
+    image: apptosap-docker-compose:1
     build:
       context: ./
       dockerfile: Dockerfile
     volumes:
-      - /data/radek-app-container
+      - /data/apptosap-container
     ports:
       - "8080:8080"

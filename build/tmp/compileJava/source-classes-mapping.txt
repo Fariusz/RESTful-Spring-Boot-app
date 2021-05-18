@@ -1,0 +1,16 @@
+com/example/demo/controller/TaskController.java
+ com.example.demo.controller.TaskController
+com/example/demo/model/StringToJson.java
+ com.example.demo.model.StringToJson
+com/example/demo/model/Task.java
+ com.example.demo.model.Task
+com/example/demo/service/TaskService.java
+ com.example.demo.service.TaskService
+com/example/demo/model/Method.java
+ com.example.demo.model.Method
+com/example/demo/DemoApplication.java
+ com.example.demo.DemoApplication
+com/example/demo/config/Config.java
+ com.example.demo.config.Config
+com/example/demo/repository/TaskRepository.java
+ com.example.demo.repository.TaskRepository
